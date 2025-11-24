@@ -1,0 +1,13 @@
+{
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--max-old-space-size=4096"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/some-task",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
