@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles specific to this application can go here */
+/* Ensuring full height for the body */
+html, body, #__next {
+  height: 100%;
+}
