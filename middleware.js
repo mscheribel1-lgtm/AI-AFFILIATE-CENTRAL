@@ -9,20 +9,19 @@ export default authMiddleware({
   // Routes that require a valid sign-in (e.g., the admin panel)
   // If a user tries to access a protected route while signed out, 
   // they will be redirected to the sign-in page.
-  ignoredRoutes: ["/api/webhooks(.*)"], // We ignore webhooks from authentication
+  ignoredRoutes: ["/api/webhooks(.*)"],
 });
 
+// We are simplifying the matcher to fix the build error.
+// This is the standard, simple configuration for Next.js App Router protection.
 export const config = {
-  // Apply middleware to all routes except API routes and static files
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ["/((?!.*\\..*|_next).*)"],
 };
 
-### **Action Plan: Create the Middleware File**
+### **Final Action Steps**
 
-1.  **Go to GitHub** and navigate to the **root** of your repository (`AI-AFFILIATE-CENTRAL`).
-2.  Click **"Add file"** $\rightarrow$ **"Create new file"**.
-3.  **Name the File:** Type the name: **`middleware.js`**
-4.  **Paste the Code:** Copy and paste the plain text code above into the file content area.
-5.  **Commit the File:** Click the green **"Commit new file"** button.
+1.  **Copy the Plain Text Code:** Copy the block of JavaScript above (starting with `import { authMiddleware }`).
+2.  **Paste and Replace:** In the GitHub editor for `middleware.js`, paste the code, **replacing everything** currently in that file.
+3.  **Commit:** Scroll down and click the green **"Commit changes"** button.
 
-This should resolve the final build error. Please confirm once you've committed the file!
+Once you perform this commit, the build should finally turn green!
