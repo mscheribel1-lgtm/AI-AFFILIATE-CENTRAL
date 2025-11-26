@@ -1,13 +1,9 @@
 {
   "build": {
     "env": {
-      "NODE_OPTIONS": "--max-old-space-size=4096"
+      "NEXT_DISABLE_STATIC_IMAGES": "1",
+      "NEXT_PRIVATE_MINIFY_HTML_TERSER": "0",
+      "NEXT_TELEMETRY_DISABLED": "1"
     }
-  },
-  "crons": [
-    {
-      "path": "/api/cron/some-task",
-      "schedule": "0 0 * * *"
-    }
-  ]
+  }
 }
