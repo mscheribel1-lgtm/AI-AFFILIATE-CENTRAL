@@ -1,5 +1,4 @@
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
-// Path updated to CORRECTLY step up one folder to find globals.css
 import "../globals.css"; 
 
 export const metadata = {
@@ -12,13 +11,10 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body>
-          {/* Header/Nav for user context with UserButton */}
           <header className="flex justify-end p-4 bg-white shadow-md w-full">
-            {/* The UserButton handles sign-out and profile management */}
             <UserButton afterSignOutUrl="/" />
           </header>
           
-          {/* Main Content Area */}
           <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-8 pt-0">
             {children}
           </main>
